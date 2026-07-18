@@ -344,3 +344,21 @@ console.log(
 "%cLensCraft Photography Website Loaded",
 "color:#d4af37;font-size:18px;font-weight:bold;"
 );
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", function() {
+
+        alert("Your message is being sent...");
+
+    });
+fetch("https://your-backend.com/api/contact", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+    })
+});
