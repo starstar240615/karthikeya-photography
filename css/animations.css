@@ -1,0 +1,464 @@
+/* ==========================================
+   LensCraft Photography Website
+   animations.css
+   ========================================== */
+
+/* ---------- Global Transitions ---------- */
+
+*{
+    transition: color .3s ease,
+                background-color .3s ease,
+                transform .3s ease,
+                opacity .3s ease,
+                box-shadow .3s ease;
+}
+
+/* ---------- Fade In ---------- */
+
+.fade-in{
+    animation:fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ---------- Slide Up ---------- */
+
+.slide-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    animation:slideUp 1s forwards;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Slide Left ---------- */
+
+.slide-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+    animation:slideLeft 1s forwards;
+
+}
+
+@keyframes slideLeft{
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ---------- Slide Right ---------- */
+
+.slide-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+    animation:slideRight 1s forwards;
+
+}
+
+@keyframes slideRight{
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ---------- Zoom ---------- */
+
+.zoom{
+
+    animation:zoomIn 1s ease forwards;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ---------- Hero Animation ---------- */
+
+.hero h4{
+
+    animation:fadeDown 1s;
+
+}
+
+.hero h1{
+
+    animation:fadeUp 1.2s;
+
+}
+
+.hero p{
+
+    animation:fadeUp 1.4s;
+
+}
+
+.hero-buttons{
+
+    animation:fadeUp 1.6s;
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Gallery Hover ---------- */
+
+.gallery-grid img:hover{
+
+    transform:scale(1.06);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+/* ---------- Service Card ---------- */
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ---------- Testimonial ---------- */
+
+.testimonial-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+/* ---------- Pricing ---------- */
+
+.price-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.4);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ---------- Footer Icons ---------- */
+
+.social-icons img:hover{
+
+    transform:rotate(360deg);
+
+}
+
+/* ---------- Back To Top ---------- */
+
+#backToTop:hover{
+
+    transform:translateY(-8px) scale(1.1);
+
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar{
+
+    animation:navbarFade .8s;
+
+}
+
+@keyframes navbarFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Preloader ---------- */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ---------- Floating ---------- */
+
+.float{
+
+    animation:floating 3s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- Pulse ---------- */
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ---------- Rotate ---------- */
+
+.rotate{
+
+    animation:rotate360 12s linear infinite;
+
+}
+
+@keyframes rotate360{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ---------- Bounce ---------- */
+
+.bounce{
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    40%{
+
+        transform:translateY(-12px);
+
+    }
+
+    60%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+/* ---------- Image Overlay ---------- */
+
+.gallery-grid{
+
+    overflow:hidden;
+
+}
+
+.gallery-grid img{
+
+    transition:transform .4s ease;
+
+}
+
+/* ---------- Smooth Section Entry ---------- */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
